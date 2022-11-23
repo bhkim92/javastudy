@@ -1,0 +1,3329 @@
+10/27
+
+컴퓨터
+1. 하드웨어 : 눈에 보이고 만져지고, 모니터, RAM, CPU
+2. 소프트웨어 : 눈에는 보이는데 만져지지 않는다
+	시스템소프트웨어 -> 컴퓨터의 기본 설치, 운영
+	응용소프트웨어 -> 설치된 소프트웨어 (메모장, 브라우저, PPT, eclipse ...) -> 웹어플리케이션
+
+프로그램 << 프로그래밍언어 만드는 어플리케이션
+
+프로그래밍언어
+<<프로그램을 만드는 언어
+<<컴퓨터와 대화를 하는 언어
+
+프로그램언어의 동작 원리
+소스 (Source)
+.java	.class
+					  0,1
+사람	컴파일(번역)	실행(메모리)	컴퓨터
+사람 	컴파일		실행(메모리)          -> 컴퓨터 (기계) 0, 1
+.java	.class
+
+1. 프로그램 언어의 종류
+  1) 컴파일 언어 (번역)	  java, c, c++
+  2) 컴파일X (인터프리터) -> 해석 javascript, jsp, swift...
+
+
+2. 실행 방식의 종류
+  1) 객체지향의 언어 java, c++, Object-C...
+  2) 절차지향언어 C
+
+프로그래머 >> 설계 ..
+
+
+======================
+10/28
+
+.jar 자바의 압축파일명(자바 클래스 파일을 압축)
+패키지 단위로 압축
+패키지 - 비슷한 기능의 클래스를 모아둔 디렉토리
+라이브러리 - 미리 사용할 목적으로 만들어 놓은 패키지
+
+java.lang 자바의 기본 패키지
+
+java를 배운다는 것은 -> 라이브러리를 공부하는 것
+
+https://docs.oracle.com/javase/8/docs/api/
+
+1.프로젝트 : 패키지 단위
+1)프로젝트명
+2)패키지생성 도메인 역순 daum.net com.naver.
+com.java
+org.java
+<1> 변수 variable
+org.java.variableex
+
+3)클래스 생성 - 첫글자 대문자
+키워드(예약어): 이미 존재하는 클래스명
+
+실행하는 방법 
+1. 우클릭 Run as - javaApplication
+2. 메뉴 - Run as - javaApplication
+3. 바로실행 ctrl + f11
+
+
+변수 : 하나의 데이터(자료)를 저장할 수 있는 공간
+2가지 의미
+1) 저장공간(주소)
+2) 참조값(메모리가 참조하는 값)
+
+데이터(자료) - 텍스트, 이미지, 파일, 동영상, 객체 ....
+
+1.변수를 선언 - 기본적으로 같은 공간에서 같은 이름의 변수명을 사용할 수 없다.
+2.변수를 초기화 = 데이터를 추가
+3. 변수를 메모리에 할당
+
+주석 - 컴파일x 설명글 
+// 한줄 주석
+/* 
+여러줄 주석 
+*/
+
+bit 데이터의 기본단위 1bit 0 1
+byte 메모리의 기본 단위 1byte = 8bit
+
+1byte 8bit -128 ~ +127 256
+0 000000
+1 111111
+
+==============================
+자바의 기본 자료형 primitive types -> data 1개
+
+	1	2	4	8
+정수형    byte        short         int              long
+실수형			float        double
+문자형		char -> c언어 1byte
+논리형    boolean
+================================
+
+정수형 1 199 -10  int
+실수형 1.232323 3.33  long
+문자형 'a'하나의 문자 (작은 따옴표) 
+논리형 true, false
+
+1byte 8bit     -2^7 ~ +2^7-1 = -128 ~ +127
+1short 16bit  -2^15 ~ +2^15-1 = -32,768 ~ +32,767
+1int 32bit      -2^31 ~ +2^31-1 = -2,147,483,648 ~ +2,147,483,647
+1long 64bit   -2^61 ~ +2^61-1 = 
+
+double
+11111111
+float
+0000
+
+클래스명.속성.매서드
+System.out.println("기본 자료형");
+
+컨트롤 알트 방향키 아래 - 한줄 복사
+알트 방향키 위/아래 - 한줄 이동
+컨트롤 쉬프트 플러스 - 확대
+syso 컨트롤 스페이스 - 자동완성
+
+System.out.println("문자열"+변수); 
+//콘솔에 출력 -> 문자열은 그대로, 변수의 참조값이 출력
+int i=10;
+System.out.println("'i-> " +i);
+출력 -> i-> 10
+
+==자바의 객체형 타입== {속성:값...} -> 메모리 주소
+
+참조형(객체형==object형) new 객체();
+string, class, interface
+참조형 기본 >> null
+
+class >> "사용자정의 타입"
+
+main 컨트롤 스페이스
+컨트롤 슬러시 - 주석처리
+
+변수이름(명명규칙)
+-키워드(예약어)를 사용할 수 없다.
+-숫자로 시작할 수 없다.
+-공백을 허용하지 않는다.
+-'_' $ 이외의 특수문자 x
+-대소문자 구분한다.
+-소문자로 시작한다.
+-다른 문자가 시작되면 대문자로 시작한다.
+-한글을 사용하지 않는다.
+
+
+=================변수의 종류=================
+
+1. 인스턴스멤버(인스턴스 변수):클래스 내부의 변수 -> 인스턴스를 생성한 후 접근 가능
+2. 클래스멤버(클래스 변수) : 인스턴스를 생성하지 않아도 접근 가능
+3. 지역변수(매서드 안에 선언) : 매서드의 안의 변수
+4. 지역변수(매개인자) : 매서드 매개인자
+
+echo "# javastudy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bhkim92/javastudy.git
+git push -u origin main
+5. 객체 참조 변수 : 객체(인스턴스)의 주소값을 저장
+
+
+============상수==========
+상수란 수식에서 변하지 않는 값을 의미한다.
+
+casting 형 변환
+자동형변환
+큰자료형+작은자료형 >> 큰자료형+큰자료형
+
+
+============================
+
+
+10/31
+
+=======================
+java 객체형 types
+
+new 객체형();
+String - 문자열""
+	String str1=new String();
+	String str2="문자열";
+배열 - new Array();
+	int[] arr1=new Array();
+	int[] arr2={1,2,3,4,5};
+class - 객체를 만드는 설계도
+	java library
+	사용자 정의 클래스(프로그래머가 직접 생성)
+interface - new를 생성 못한다.
+	
+=========================
+
+시스템의 출력
+
+System.out.println(); //계행
+System.out.print(); //이름:
+System.out.println("%d" , 10); //서식문자, 출력값
+
+시스템 입력
+
+Scanner - 문자, 정수, 실수, boolean, 문자열 ,,,
+java.util.Scanner; -> rt.jar
+Scanner scn=new Scanner(System.in);
+scn.next(); //문자열 입력 (공백x), 단어, "이름", "문자열"
+scn.nextLine(); //문자열 입력(공백 포함), "문자열 입력 123"
+scn.nextInt(); //정수형 입력
+scn.nextDouble(); //실수형 입력
+
+==========================
+
+연산자
+
+-연산: 데이터를 처리(계산,일)하여 결과를 산출하는 것(Operation)
+-연산자: 연산을 하는 기호 +-*/
+-피연산자(operand): 연산의 대상(항)
+5+8 / 5-8 / 5*8 / 5/8
+
+1. 단항 연산자
+증감 연산자 -> 반복문과 많이 사용
+++
+--
+
+int i=0;
+i++; // 1 증가
+i--; // 1 감소
+
+int i=10;
+System.out.println(i++); // 선처리 후증가 10
+System.out.println(i); // 11
+System.out.println(++i); // 선처리 후증가 12
+System.out.println(i); // 12
+
+System.out.println(i--); // 선처리 후감소 12
+System.out.println(i); // 11
+System.out.println(--i); // 11
+System.out.println(i--); // 선처리 후감소 10
+
+i++; // 선처리 후증가
+++ㅑ; // 선증가 후처리
+i--; // 선처리 후감소
+--i;; // 선감소 후처리
+
+증감 연산자 -> 반복문(for)과 많이 사용
+for(초기화;조건식;증감식){
+	//조건식이 true면 실행문(명령문) 처리
+
+for(int i=0;i<10;i++){
+}
+
+for문에서는 예외적으로 ++1 1++ 똑같음
+
+
+
+2. 이항 연산자
+
+1) 산술 연산자
++ 더하기
+- 빼기
+* 곱하기
+/ 나누기
+% 몫
+
+숫자+숫자=숫자
+숫자+"문자열"=문자열
+10+"10"="1010"
+10+"10"+10="1010"+"10"="101010"
+10+10+"10"="20+"10"="2010"
+"10"+(10+10)="10"+20="1020"
+
+System.out.println(변수+"문자열")
+
+2) 대입 연산자 - 연산 결과를 변수에 대입
+int num=10;
+Primitive type: 기본자료형(8가지)
+int num=10; //실제 data값을 대입
+
+Referance: 참조형 타입(String, 배열, class, interface)
+객체형(Object형)
+//객체참조변수(객체의 주소값을 저장)
+//new - 객체를 생성
+
+
+String str=new String("userid")
+. -> 객체 접근 연산자
+str.속성;
+str.매서드();
+
+복합대입연산자
+
+int num=10;
+num=num+10;
+num+=10;
+
+num+=10; // 복합 대입 연산자
+num-=10;
+num*=10;
+num/=10;
+num%=10;		
+
+
+
+3) 비교 연산자 -> "왼쪽"
+연산의 결과는 true, false로 반환(return)
+**제어문(조건문)(if, switch)와 같이 사용하는 경우가 많다.
+>	크냐
+>=	크거나 같냐
+<	작냐
+<=	작거나 같으냐
+==	같으냐
+!=	같지 않지?
+
+int i=10;
+==->premitive type 비교, 단순 주소값 비교
+
+문자열(객체) 비교
+객체1.equals(객체2);
+
+String id="11";
+strAge.equals("11");
+
+
+4.논리 연산자 ($$, ||, ^, ~) -> return boolean
+논리곱(모든 조건이 true일 때만 true)
+조건1 && 조건2 결과
+true	true   true
+true	false  false
+false	true   false
+false	false  false
+
+논리합(하나 이상의 조건이 true일 때 true)
+조건1 || 조건2 결과
+true	true   true
+true	false  true
+false	true   true
+false	false  false
+
+Xor(서로 다르면 true)
+조건1   ^  조건2 결과
+true	true   false
+true	false  true
+false	true   true
+false	false  false
+
+!(부정)
+! true false
+! false false;
+
+if{userId.equals("m111") && userPw.equals("1111")
+}else{
+}
+
+조건 연산자 -> 삼항연산자 -> 실무(프론트)에서 많이 사용(조건이 2개일 경우)
+
+? : 
+
+조건식? 조건이 true: 나머지;
+
+int result=10>10?1:0;
+
+if(10>10){
+	//1
+}else{
+	//0
+}
+
+
+
+
+비트 연산자 2진수
+   &  결과
+1       1   1	
+1       0   0
+0       1   0
+0       0   0
+10진수   2진수
+10	1010
+12	&1100
+8	1000
+
+^(xor) - 서로 다르면 1
+1       1   0
+1       0   1
+0       1   1
+0       0   0
+
+10진수  2진수
+10	1010
+12	^1100
+6	0110
+
+~(not)
+10진수   2진수
+10	1010
+	~0101
+
+**Wrapper 클래스
+
+Integer.toBinaryString(int형 data);
+int형 data -> String 2진수형으로 변경
+
+Integer.toBinaryString(num1 & num2);
+
+
+0 0000000
+1 1111111
+
+
+
+
+A 65
+a 97
+
+char c1='A'l
+int c2='A';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+쉬프트 연산자
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+오른쪽 쉬프트 : 작아진다
+10>>2
+   1010
+        1010
+
+** 소수점 이하는 삭제
+
+왼쪽 쉬프트 : 커진다
+10<<2
+        1010
+      101000
+
+** 빈 자리는 0으로 채운다
+
+
+
+
+
+
+
+
+
+
+3. 삼항 연산자(?:)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**제어문(조건문) -> 조건에 맞으면 true, 틀리면 false
+1. if문
+- 조건이 1개일 경우
+
+if(조건){
+	//조건이 true일 때만 실행
+}
+
+if(조건) //명령문;
+
+int i=10;
+
+if(i>10){
+	//명령문(처리문)
+	"10보다 큽니다."
+}
+
+조건이 두개
+if(조건){
+	//조건이 true
+}else{
+	//조건이 true가 아닐 때
+} 
+
+-조건이 2개 이상
+
+if(조건1){
+	//1true
+}else if(조건2){
+	//2true
+}else if(조건3){
+	//3true
+}else	
+	//나머지
+}
+
+
+
+
+
+
+
+
+
+
+2. switch문
+변수, 타입, 연산자, 조건문, 반복문, 배열
+다른 프로그램 언어와 유사
+
+===================================
+
+1. 라이브러리(Library)
+응용 프로그램 개발을 위해 필요한 기능을 모아 놓은 소프트웨어
+jQuery, java library(패키지)
+
+2. 프레임워크(Framework)
+응용프로그램이나 소프트웨어의 개발을 수월하게 하기 위해 제공된 소프트웨어 환경
+Spring(JAVA), react, vue, angular, codeigniter(PHP)
+
+3. API(application programming interface)
+응용 프로그램에서 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스 -> 구글 지도API, 카카오Oauth2, restful api
+
+
+
+
+
+========================================
+
+**반복문
+
+1.for문
+
+for (초기화;조건식;증감식) {
+
+	// 조건이 true면 처리
+}
+
+2. while
+3. do ~while
+4. 객체형 반복문
+
+======================================
+
+11/01
+
+java 객체형 types
+
+new 객체형();
+String - 문자열""
+	String str1=new String();
+	String str2="문자열";
+배열 - new Array();
+	int[] arr1=new Array();
+	int[] arr2={1,2,3,4,5};
+class - 객체를 만드는 설계도
+	java library
+	사용자 정의 클래스(프로그래머가 직접 생성)
+interface - new를 생성 못한다.
+	
+=========================
+
+시스템의 출력
+
+System.out.println(); //계행
+System.out.print(); //이름:
+System.out.println("%d" , 10); //서식문자, 출력값
+
+시스템 입력
+
+Scanner - 문자, 정수, 실수, boolean, 문자열 ,,,
+java.util.Scanner; -> rt.jar
+Scanner scn=new Scanner(System.in);
+scn.next(); //문자열 입력 (공백x), 단어, "이름", "문자열"
+scn.nextLine(); //문자열 입력(공백 포함), "문자열 입력 123"
+scn.nextInt(); //정수형 입력
+scn.nextDouble(); //실수형 입력
+
+==========================
+
+연산자
+
+-연산: 데이터를 처리(계산,일)하여 결과를 산출하는 것(Operation)
+-연산자: 연산을 하는 기호 +-*/
+-피연산자(operand): 연산의 대상(항)
+5+8 / 5-8 / 5*8 / 5/8
+
+1. 단항 연산자
+증감 연산자
+++
+--
+2. 이항 연산자
+
+1) 산술 연산자
++ 더하기
+- 빼기
+* 곱하기
+/ 나누기
+% 몫
+
+숫자+숫자=숫자
+숫자+"문자열"=문자열
+10+"10"="1010"
+10+"10"+10="1010"+"10"="101010"
+10+10+"10"="20+"10"="2010"
+"10"+(10+10)="10"+20="1020"
+
+System.out.println(변수+"문자열")
+
+2) 대입 연산자 - 연산 결과를 변수에 대입
+int num=10;
+Primitive type: 기본자료형(8가지)
+int num=10; //실제 data값을 대입
+
+Referance: 참조형 타입(String, 배열, class, interface)
+객체형(Object형)
+//객체참조변수(객체의 주소값을 저장)
+//new - 객체를 생성
+
+
+String str=new String("userid")
+. -> 객체 접근 연산자
+str.속성;
+str.매서드();
+
+복합대입연산자
+
+int num=10;
+num=num+10;
+num+=10;
+
+num+=10; // 복합 대입 연산자
+num-=10;
+num*=10;
+num/=10;
+num%=10;		
+
+
+
+3) 비교 연산자 -> "왼쪽"
+연산의 결과는 true, false로 반환(return)
+**제어문(조건문)(if, switch)와 같이 사용하는 경우가 많다.
+>	크냐
+>=	크거나 같냐
+<	작냐
+<=	작거나 같으냐
+==	같으냐
+!=	같지 않지?
+
+int i=10;
+==->premitive type 비교, 단순 주소값 비교
+
+문자열(객체) 비교
+객체1.equals(객체2);
+
+String id="11";
+strAge.equals("11");
+
+
+4.논리 연산자 ($$, ||, ^, ~) -> return boolean
+논리곱(모든 조건이 true일 때만 true)
+조건1 && 조건2 결과
+true	true   true
+true	false  false
+false	true   false
+false	false  false
+
+논리합(하나 이상의 조건이 true일 때 true)
+조건1 || 조건2 결과
+true	true   true
+true	false  true
+false	true   true
+false	false  false
+
+Xor(서로 다르면 true)
+조건1   ^  조건2 결과
+true	true   false
+true	false  true
+false	true   true
+false	false  false
+
+!(부정)
+! true false
+! false false;
+
+if{userId.equals("m111") && userPw.equals("1111")
+}else{
+}
+
+조건 연산자
+비트 연산자
+쉬프트 연산자
+
+3. 삼항 연산자
+?:
+
+
+
+**제어문(조건문) -> 조건에 맞으면 true, 틀리면 false
+1. if문
+- 조건이 1개일 경우
+
+if(조건){
+	//조건이 true일 때만 실행
+}
+
+if(조건) //명령문;
+
+int i=10;
+
+if(i>10){
+	//명령문(처리문)
+	"10보다 큽니다."
+}
+
+조건이 두개
+if(조건){
+	//조건이 true
+}else{
+	//조건이 true가 아닐 때
+} 
+
+2. switch문
+변수, 타입, 연산자, 조건문, 반복문, 배열
+다른 프로그램 언어와 유사
+
+===================================
+
+1. 라이브러리(Library)
+응용 프로그램 개발을 위해 필요한 기능을 모아 놓은 소프트웨어
+jQuery, java library(패키지)
+
+2. 프레임워크(Framework)
+응용프로그램이나 소프트웨어의 개발을 수월하게 하기 위해 제공된 소프트웨어 환경
+Spring(JAVA), react, vue, angular, codeigniter(PHP)
+
+3. API(application programming interface)
+응용 프로그램에서 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스 -> 구글 지도API, 카카오Oauth2, restful api
+
+=======================
+
+11/02
+
+=======================
+java 객체형 types
+
+new 객체형();
+String - 문자열""
+	String str1=new String();
+	String str2="문자열";
+배열 - new Array();
+	int[] arr1=new Array();
+	int[] arr2={1,2,3,4,5};
+class - 객체를 만드는 설계도
+	java library
+	사용자 정의 클래스(프로그래머가 직접 생성)
+interface - new를 생성 못한다.
+	
+=========================
+
+시스템의 출력
+
+System.out.println(); //계행
+System.out.print(); //이름:
+System.out.println("%d" , 10); //서식문자, 출력값
+
+시스템 입력
+
+Scanner - 문자, 정수, 실수, boolean, 문자열 ,,,
+java.util.Scanner; -> rt.jar
+Scanner scn=new Scanner(System.in);
+scn.next(); //문자열 입력 (공백x), 단어, "이름", "문자열"
+scn.nextLine(); //문자열 입력(공백 포함), "문자열 입력 123"
+scn.nextInt(); //정수형 입력
+scn.nextDouble(); //실수형 입력
+
+==========================
+
+연산자
+
+-연산: 데이터를 처리(계산,일)하여 결과를 산출하는 것(Operation)
+-연산자: 연산을 하는 기호 +-*/
+-피연산자(operand): 연산의 대상(항)
+5+8 / 5-8 / 5*8 / 5/8
+
+1. 단항 연산자
+증감 연산자
+++
+--
+2. 이항 연산자
+
+1) 산술 연산자
++ 더하기
+- 빼기
+* 곱하기
+/ 나누기
+% 몫
+
+숫자+숫자=숫자
+숫자+"문자열"=문자열
+10+"10"="1010"
+10+"10"+10="1010"+"10"="101010"
+10+10+"10"="20+"10"="2010"
+"10"+(10+10)="10"+20="1020"
+
+System.out.println(변수+"문자열")
+
+2) 대입 연산자 - 연산 결과를 변수에 대입
+int num=10;
+Primitive type: 기본자료형(8가지)
+int num=10; //실제 data값을 대입
+
+Referance: 참조형 타입(String, 배열, class, interface)
+객체형(Object형)
+//객체참조변수(객체의 주소값을 저장)
+//new - 객체를 생성
+
+
+String str=new String("userid")
+. -> 객체 접근 연산자
+str.속성;
+str.매서드();
+
+복합대입연산자
+
+int num=10;
+num=num+10;
+num+=10;
+
+num+=10; // 복합 대입 연산자
+num-=10;
+num*=10;
+num/=10;
+num%=10;		
+
+
+
+3) 비교 연산자 -> "왼쪽"
+연산의 결과는 true, false로 반환(return)
+**제어문(조건문)(if, switch)와 같이 사용하는 경우가 많다.
+>	크냐
+>=	크거나 같냐
+<	작냐
+<=	작거나 같으냐
+==	같으냐
+!=	같지 않지?
+
+int i=10;
+==->premitive type 비교, 단순 주소값 비교
+
+문자열(객체) 비교
+객체1.equals(객체2);
+
+String id="11";
+strAge.equals("11");
+
+
+4.논리 연산자 ($$, ||, ^, ~) -> return boolean
+논리곱(모든 조건이 true일 때만 true)
+조건1 && 조건2 결과
+true	true   true
+true	false  false
+false	true   false
+false	false  false
+
+논리합(하나 이상의 조건이 true일 때 true)
+조건1 || 조건2 결과
+true	true   true
+true	false  true
+false	true   true
+false	false  false
+
+Xor(서로 다르면 true)
+조건1   ^  조건2 결과
+true	true   false
+true	false  true
+false	true   true
+false	false  false
+
+!(부정)
+! true false
+! false false;
+
+if{userId.equals("m111") && userPw.equals("1111")
+}else{
+}
+
+조건 연산자
+비트 연산자
+쉬프트 연산자
+
+3. 삼항 연산자
+?:
+
+
+
+**제어문(조건문) -> 조건에 맞으면 true, 틀리면 false
+1. if문
+- 조건이 1개일 경우
+
+if(조건){
+	//조건이 true일 때만 실행
+}
+
+if(조건) //명령문;
+
+int i=10;
+
+if(i>10){
+	//명령문(처리문)
+	"10보다 큽니다."
+}
+
+조건이 두개
+if(조건){
+	//조건이 true
+}else{
+	//조건이 true가 아닐 때
+} 
+
+2. switch문 -> 모든 switch문은 if문으로 바꿀 수 있다.
+
+switch~case ...조건의 결과가 정수형타입의 값, 하나 결과
+
+switch(변수(설정값)) {
+case "값1" :// 변수(설정값)이 값1이면
+    처리문:
+    break; //switch문을 종료
+
+case "값2" :// 변수(설정값)이 값2이면
+    처리문:
+    break; //switch문을 종료
+
+case "값3" :// 변수(설정값)이 값3이면
+    처리문:
+    break; //switch문을 종료
+
+default:
+     나머지 처리문; //else, 생략 가능...
+
+} switch문 종료.
+
+case 90:
+case 91:
+case 93:.....
+
+key
+관리자 key -> 1 "관리자 권한"
+사장 key -> 2 "중간관리자 권한"
+사원 key -> 3 "일반사원권한"
+일반 -> 접속불가.. 관리자에게 문의
+
+
+
+
+
+
+
+
+*** break -> 그 지점에서 아래 명령문을 실행하지 않고 코드블록을 벗어난다.
+                   -> 메서드를 종료, if, switch문 조건문을 종료
+
+*** 변수(설정값) -> 결과값: 정수형, 문자, 문자열 ** 범위
+
+
+
+
+
+
+
+
+변수, 타입, 연산자, 조건문, 반복문, 배열
+다른 프로그램 언어와 유사
+
+===================================
+
+1. 라이브러리(Library)
+응용 프로그램 개발을 위해 필요한 기능을 모아 놓은 소프트웨어
+jQuery, java library(패키지)
+
+2. 프레임워크(Framework)
+응용프로그램이나 소프트웨어의 개발을 수월하게 하기 위해 제공된 소프트웨어 환경
+Spring(JAVA), react, vue, angular, codeigniter(PHP)
+
+3. API(application programming interface)
+응용 프로그램에서 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스 -> 구글 지도API, 카카오Oauth2, restful api
+
+
+========================================
+google drive
+notion - Oauth
+trello
+
+source -> 버전 관리 -> git, github
+
+=====================================
+
+******반복문 -> 반복적인 명령문을 처리
+
+1.for 
+for(초기화;조건식;증감식){
+
+	//조건이 true면 처리
+}
+** 조건이 false면 한번도 실행 X
+
+
+2. while -> 데이터베이스의 data를 불러오는데 많이 사용
+                -> 무한 루프 주의
+** 조건이 true면 실행
+** 조건이 false면 한번도 실행 X
+
+초기화
+
+while(조건식) {
+	//명령문(처리,실행)
+
+	증감식;
+}
+
+
+
+3. do~while
+
+
+================================
+선생님 192.168.23.211:8091
+
+
+==============================
+
+11/03
+
+=======================
+java 객체형 types
+
+new 객체형();
+String - 문자열""
+	String str1=new String();
+	String str2="문자열";
+배열 - new Array();
+	int[] arr1=new Array();
+	int[] arr2={1,2,3,4,5};
+class - 객체를 만드는 설계도
+	javaa library
+	사용자 정의 클래스(프로그래머가 직접 생성)
+interface - new를 생성 못한다.
+	
+=========================
+
+시스템의 출력
+
+System.out.println(); //계행
+System.out.print(); //이름:
+System.out.println("%d" , 10); //서식문자, 출력값
+
+시스템 입력
+
+Scanner - 문자, 정수, 실수, boolean, 문자열 ,,,
+java.util.Scanner; -> rt.jar
+Scanner scn=new Scanner(System.in);
+scn.next(); //문자열 입력 (공백x), 단어, "이름", "문자열"
+scn.nextLine(); //문자열 입력(공백 포함), "문자열 입력 123"
+scn.nextInt(); //정수형 입력
+scn.nextDouble(); //실수형 입력
+
+==========================
+
+연산자
+
+-연산: 데이터를 처리(계산,일)하여 결과를 산출하는 것(Operation)
+-연산자: 연산을 하는 기호 +-*/
+-피연산자(operand): 연산의 대상(항)
+5+8 / 5-8 / 5*8 / 5/8
+
+1. 단항 연산자
+증감 연산자
+++
+--
+2. 이항 연산자
+
+1) 산술 연산자
++ 더하기
+- 빼기
+* 곱하기
+/ 나누기
+% 몫
+
+숫자+숫자=숫자
+숫자+"문자열"=문자열
+10+"10"="1010"
+10+"10"+10="1010"+"10"="101010"
+10+10+"10"="20+"10"="2010"
+"10"+(10+10)="10"+20="1020"
+
+System.out.println(변수+"문자열")
+
+2) 대입 연산자 - 연산 결과를 변수에 대입
+int num=10;
+Primitive type: 기본자료형(8가지)
+int num=10; //실제 data값을 대입
+
+Referance: 참조형 타입(String, 배열, class, interface)
+객체형(Object형)
+//객체참조변수(객체의 주소값을 저장)
+//new - 객체를 생성
+
+
+String str=new String("userid")
+. -> 객체 접근 연산자
+str.속성;
+str.매서드();
+
+복합대입연산자
+
+int num=10;
+num=num+10;
+num+=10;
+
+num+=10; // 복합 대입 연산자
+num-=10;
+num*=10;
+num/=10;
+num%=10;		
+
+
+
+3) 비교 연산자 -> "왼쪽"
+연산의 결과는 true, false로 반환(return)
+**제어문(조건문)(if, switch)와 같이 사용하는 경우가 많다.
+>	크냐
+>=	크거나 같냐
+<	작냐
+<=	작거나 같으냐
+==	같으냐
+!=	같지 않지?
+
+int i=10;
+==->premitive type 비교, 단순 주소값 비교
+
+문자열(객체) 비교
+객체1.equals(객체2);
+
+String id="11";
+strAge.equals("11");
+
+
+4.논리 연산자 ($$, ||, ^, ~) -> return boolean
+논리곱(모든 조건이 true일 때만 true)
+조건1 && 조건2 결과
+true	true   true
+true	false  false
+false	true   false
+false	false  false
+
+논리합(하나 이상의 조건이 true일 때 true)
+조건1 || 조건2 결과
+true	true   true
+true	false  true
+false	true   true
+false	false  false
+
+Xor(서로 다르면 true)
+조건1   ^  조건2 결과
+true	true   false
+true	false  true
+false	true   true
+false	false  false
+
+!(부정)
+! true false
+! false false;
+
+if{userId.equals("m111") && userPw.equals("1111")
+}else{
+}
+
+조건 연산자
+비트 연산자
+쉬프트 연산자
+
+3. 삼항 연산자
+?:
+
+
+
+**제어문(조건문) -> 조건에 맞으면 true, 틀리면 false
+1. if문
+- 조건이 1개일 경우
+
+if(조건){
+	//조건이 true일 때만 실행
+}
+
+if(조건) //명령문;
+
+int i=10;
+
+if(i>10){
+	//명령문(처리문)
+	"10보다 큽니다."
+}
+
+조건이 두개
+if(조건){
+	//조건이 true
+}else{
+	//조건이 true가 아닐 때
+} 
+
+2. switch문 -> 모든 switch문은 if문으로 바꿀 수 있다.
+
+switch~case ...조건의 결과가 정수형타입의 값, 하나 결과
+
+switch(변수(설정값)) {
+case "값1" :// 변수(설정값)이 값1이면
+    처리문:
+    break; //switch문을 종료
+
+case "값2" :// 변수(설정값)이 값2이면
+    처리문:
+    break; //switch문을 종료
+
+case "값3" :// 변수(설정값)이 값3이면
+    처리문:
+    break; //switch문을 종료
+
+default:
+     나머지 처리문; //else, 생략 가능...
+
+} switch문 종료.
+
+case 90:
+case 91:
+case 93:.....
+
+key
+관리자 key -> 1 "관리자 권한"
+사장 key -> 2 "중간관리자 권한"
+사원 key -> 3 "일반사원권한"
+일반 -> 접속불가.. 관리자에게 문의
+
+
+
+
+
+
+
+
+*** break -> 그 지점에서 아래 명령문을 실행하지 않고 코드블록을 벗어난다.
+                   -> 메서드를 종료, if, switch문 조건문을 종료
+*** continue -> 그 지점에서 아래 명령문을 실행하지 않고 코드 블럭끝에서 다시 시작
+
+*** 변수(설정값) -> 결과값: 정수형, 문자, 문자열 ** 범위
+
+
+
+
+
+
+
+
+변수, 타입, 연산자, 조건문, 반복문, 배열
+다른 프로그램 언어와 유사
+
+===================================
+
+1. 라이브러리(Library)
+응용 프로그램 개발을 위해 필요한 기능을 모아 놓은 소프트웨어
+jQuery, java library(패키지)
+
+2. 프레임워크(Framework)
+응용프로그램이나 소프트웨어의 개발을 수월하게 하기 위해 제공된 소프트웨어 환경
+Spring(JAVA), react, vue, angular, codeigniter(PHP)
+
+3. API(application programming interface)
+응용 프로그램에서 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스 -> 구글 지도API, 카카오Oauth2, restful api
+
+
+========================================
+google drive
+notion - Oauth
+trello
+
+source -> 버전 관리 -> git, github
+
+=====================================
+
+******반복문 -> 반복적인 명령문을 처리
+
+1.for 
+for(초기화;조건식;증감식){
+
+	//조건이 true면 처리
+}
+** 조건이 false면 한번도 실행 X
+
+
+2. while -> 데이터베이스의 data를 불러오는데 많이 사용
+                -> 무한 루프 주의
+** 조건이 true면 실행
+** 조건이 false면 한번도 실행 X
+
+초기화
+
+while(조건식) {
+	//명령문(처리,실행)
+
+	증감식;
+}
+
+
+
+3. do~while -> while문과 거의 같다.
+** 무조건 한번은 실행
+** 한번 반드시 실행하는 프로젝트에 사용
+
+
+초기화;
+do {
+	//증감식;
+}while(조건)
+
+
+4. 객체형 반복문 -> 컬렉션
+** foreach
+for(자료형 변수명:배열명) {
+	//
+}
+
+
+
+
+
+
+================================
+선생님 192.168.23.211 / github/hrd1027/javastudy
+
+C:\Users\Administrator\Desktop\수업자료\eclipse\javastudy
+
+===============================
+
+
+back -> Java, Servlet, JSP, Thymeleaf
+
+front -> HTML, CSS, Javascripts
+
+DB -> RDBMS -> Oracle, Mysql
+
+Dev Toos -> 이클립스, STS, 인텔리제이, SqlDev, WorkB
+
+Version -> Git, Github
+
+Deploy -> AWS -> EC2
+
+WAS -> tomcat
+
+OS -> Windows, Linux
+
+framework -> Spring boot
+
+library -> jQuery(front)
+
+====================================
+
+
+배열-> 다량 data를 처리하기 위한 list형 (순서가 있는) 타입
+
+1.같은 타입의 data를 순서대로 그룹화
+
+2. 인덱스(번지, 요소)는 0번지부터 시작된다.
+
+3. 배열의 갯수는 고정한다. >> 컬렉션. 고정X
+
+4. 배열 참조형 타입(배열의 전체 주소값으로 접근) new 배열
+
+5. 배열의 생성과 동시 초기화 해야된다.
+
+6.값을 초기화하지 않으면 0으로 초기화된다.
+
+7. 반복문(for)와 같이 많이 사용된다.
+
+8. 전체배열의 data의 갯수는 전체 인덱스 총수보다 1 크다.
+
+9. 배열 이름에 전체 배열의 주소값을 저장
+
+10. foreach (DB의 data를 가져올 때)
+
+
+random -> 무작위
+
+Math.random(); //클래스 매서드 -> 클래스명.매서드()
+
+0 <= Math.random() < 1
+
+
+Java에서 다량의 data를 처리하는 방법
+
+1. 배열 -> 순서, 같은 자료형... 갯수를 정한다.
+2. 컬렉션 -> List, Set, map, Vector, Stack.... 갯수가 정하지 않는다.
+
+
+**다차원 배열
+// int형  data 3행4열의 배열
+int[][] arr1=new int[3][4];
+
+
+           0열      1열       2열       3열
+0행    (0,0)    (0,1)    (0,2)    (0,3)
+1행     (1,0)    (1,1)    (1,2)   (1,3)
+2행     (2,0)    (2,1)    (2,2)    (2,3)
+
+arr1[0][0] - 0행0열
+
+=============================
+절차 지향언어 >> 작업 순서(알고리즘)을 표현(함수들의 집합으로 프로그래밍)
+객체 지향언어 >> "미리 사용할 목적으로 설계도를 완성하고 그 객체를 이용해서 프로그래밍"
+
+클래스 : 객체를 만들기 위한 설계도, 객체의 속성과 기능 선언
+객체(Object, 인스턴스(instance)) : 실제, 추상 >> 모든 것 .. "클래스를 통해 만들어진.. 실체"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================================
+
+java.lang 패키지
+Object o=null;//자바의 최상위 클래스
+System s=null;//표준입출력(키보드, 모니터) JVM 종료
+Class c=null; //JDBC드라이버 찾기(클래스를 메모리로드)
+Interger i=null; //Wrapper클래스(8가지)
+String str=null; //문자열저장(수정x)
+StringBuffer b=null; //문자열저장(수정O)
+Math m=null; //Math
+
+// java.util패키지 (유용) -> 컬렉션 클래스
+String[] ab={"root","1111"};
+Arrays.asList(ab); //배열을 조작(비교, 정렬, 찾기)
+Calendar c1=null; //운영체제 시간
+Date d=null; //날짜와 시간
+StringTokenizer s2=null; //특정 문자열 기준으로 문자열 추출
+Random r=null;//난수 추출(0<=X<1)
+
+========StringBuffer
+1.문자열을 추가하거나 변경할 때 주로 사용하는 자료형
+2. 생성된 이후에도 문자열의 내용을 계속 수정가능
+3. 문자열을 저장할 수 있는 용량(capacity)을 갖음
+4. 용량이 작으면 자동으로 수정되므로 프로그래머는 크게 신경쓸 필요 없음
+
+StringBuffer를 생성하는 방법
+StringBuffer sb1 = new StringBuffer(); //용량은 16
+StringBuffer sb2 = new StringBuffer(32); //용량은 32
+StringBuffer sb3 = new StringBuffer("java");
+
+
+~append(추가값); //뒤에 추가
+~delete; //삭제
+~insert; //추가
+~reverse; //역순
+
+
+===========StringTokenizer
+
+1. 하나의 문자열에서 여러 토큰(token)을 생성
+2. 지정된 분리자(delimiters)를 사용
+3. 기본분리자는 "\f\n\r\f"으로 공백문자와 탭 \f과 같은 4개의 제어문자
+4. 다른 분리자를 지정하고 싶다면 StringTokenizer의 생성자에서 2번째 인자에 기술
+기본적으로 분리자를 토큰에 속하지 않게 분리
+5. 분리자를 토큰에 포함시키려면 String Tokenizer의 생성자에서 3번째 인자를 true로 지정
+
+서버주소:포트/경로 ?전송데이터{키(key):값(value)&키:값&키:값,,}
+IP:Port/login.do?userId=m1111&userPw=1111&userName=s1111
+127.0.0.1:8090/join.do?전송데이터
+
+//직렬화
+//그룹화된 객체를 출력
+while (.has~()) {
+	.next~();//다음~
+}
+
+192.168.23.211:8091?userId=bksoul&userPW920829&userName=bhkim
+
+
+
+===========
+
+Java.Util
+다양한 유틸리티 클래스
+-프로그램에서 이용할 수 있는 각종 유틸리티가 제공되는 패키지
+-Calendar, GregorianCalendar, Date
+  주요 클래스로는 날짜와 시간 정보를 표현
+-Random
+  난수(random number)를 생성
+-Vector, Stack
+  다양한 자료형의 객체를 배열의 원소로 이용할 수 있는 자료구조를 지원
+  자료 구조에서 가장 많이 이용하는 구조 중의 하나인 스택 구조를 지원
+-Collection, Set, List, Queue, Map 등의 다양한 인터페이스와 클래스
+  여러 항목의 원소를 가변적으로 삽입과 삭제가 편리
+-> Collection Framework
+
+
+주요 클래스
+-Calendar, GregorianCalendar, Date, TimeZone, SimpleTimeZone, Locale
+달력과 시간, 이를 정의하기 위해 필요한 표준 시간대 및 지역 정보를 위한 클래스
+-Random, StringTokenizer, Dictionary
+난수, 문자열, 사전에 필요한 클래스
+-Stack, Vector, LinkedList
+자료 구조에서 많이 이용되는 배열과 스택, 연결리스트를 지원하는 클래스
+
+
+===============
+
+(int)(0~99.999..) -> 0~99
+(int)(Math.random()*100)+1) -> 1~100
+
+**Math 주요 매서드
+Math.min(100,50); //최소값 50
+Math.max(100,50);//최대값 100
+Math.abs(-100);//절대값(무조건 양수) 100
+Math.ceil(11.2);//올림 12
+Math.floor(11.5);//내림 11
+Math.round(11.5);//반올림 12
+Math.round(11.2);//반올림 11
+Math.pl;//원주율
+
+=====Random
+
+int, long, float, double 등의 다양한 형의 난수를 만들어 제공
+기본생성자
+- 현재 시간 정보로 시드 값을 지정하여 난수를 생성
+- long 형 인자의 생성자는 시드 값을 직접 지정하여 난수를 생성
+  Random rnd1 = new Random();
+  Random rnd2 = new Random(45);
+
+
+System.out.printf("%.2f\n",rd.nextDouble());
+System.out.printf("서식문자", 값);
+
+서식문자 %~ , %d(정수), %f(float), %d, %c
+
+
+==========DATE
+시간정보를 표현하는 기본 클래스
+-클래스 Date의 많은 매서드는 더 이상 사용을 권장하지 않음.
+  deprecated 매서드
+-클래스 Date는 Calendar와 밀접한 관련이 있는 클래스
+ 시간 정보를 초 정보로 저장하는데, 1/1000초인 millisecond로 표현
+-매서드 getTime()
+  1970년 1월 1일 00:00:00을 기준으로 지나간 시간을 millisecond로 반환
+  기준 시간인 1970년1월1일 00:00:00을 epoch
+클래스 DateFormat
+  패키지 java.text에 속하는 클래스로 시간 정보의 출력 형식에 제공
+클래스 Locale
+  패키지 java.util에 있는 클래스로 국가 정보를 정의한 클래스
+
+===DateFormat : 날짜를 포맷
+1. Date now = new Date(); //날짜 생성
+2. SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd"); //날짜 포맷
+3. format.format(now); // => 날짜를 날짜포맷
+System.out.println(format.format(now)); // 2022-11-16
+format=new SimpleDateFormat("E MMM dd HH:mm:ss", Locale.KOREA);
+System.out.println(format.format(now)); //Wed Nov 16 15:41:22
+
+DateFormat.SHORT 22.11.16
+DateFormat.DEFAULT 2022.11.16
+2022년 11월 16일(수)
+
+DateFormat df2 = DateFormat.getDateTimeInstance(DateFormat.Long, DateFormat.Long, Locale.KOREA);
+2022년 11월 16일 (수) 오후 4시 29분 59초
+
+
+========CALENDAR
+날짜와 시간에 관한 정보를 제공하는 추상 클래스
+-자체의 생성자를 이용하여 객체를 생성 불가능
+-정적 매소드 getInstance()
+  현재 시간 정보를 갖는 객체를 생성해주는
+-메소드 getTime(0
+  반환형은 Date로서, 바로 출력하면 영문 표현의 시간 정보를 출력 가능
+
+Calendar now = Calendar.getInstance();
+System.out.println(now.getTime());
+
+=============================
+
+***java.time 패키지
+**자바8의 java.time 패키지(LocalDate, LocalTime, LocalDateTime등)
+LocalDate, LocalDateTime 사용하기 에서 자바8에서 추가된 새로운 날짜와 시간
+
+1. 날짜와 시간 객체 생성하기
+1.1. LocalDate
+로컬 날짜 클래스로 날짜 정보만 필요할 때 사용하면 된다.
+
+LocalDate currentDate=LocalDate.now();
+//컴퓨터의 현재 날짜 정보를 저장한 LocalDate 객체를 리턴한다. 결과: 2022-11-17
+
+LocalDate targetDate = LocalDate.of(int year, int month, int dayOfMonth);
+//파라미터로 주어진 날짜정보를 저장한 LocalDate 객체를 리턴한다. 결과: 2022-11-17
+
+
+1.2. LocalTime
+로컬 시간 클래스로 시간 정보만 필요할 때 사용하면 된다.
+
+LocalTime currentTime = LocalTime.now();
+// 컴퓨터의 현재 시간 정보. 결과: 16:24:02.408
+LocalTime targetTime = LocalTime.of(int hour, int minute, int second, int nanoOfSecond);
+//파라미터로 주어진 시간 정보를 저장한 LocalTime 객체를 리턴한다.
+
+
+1.3. LocalDateTime
+날짜와 시간 정보 모두가 필요할 때 사용하면 된다.
+
+LocalDateTime currentDateTime = LocalDateTime.now();
+// 컴퓨터의 현재 날짜와 시간 정보. 결과: 2022-11-17T16:34:24.757
+
+LocalDateTime targetDateTime=
+LocalDateTime.of(int year, int month, int dayOfMonth, int hour, int minute, int second, int nanoOfSecond);
+
+
+1.4. ZonedDateTime
+표준시간대를 지정하고 날짜를 가져오기
+
+ZonedDateTime utcDateTime = ZonedDateTime.now(Zoneld.of("UTC"));
+ZonedDateTime seoulDateTime = ZonedDateTime.now(Zoneld.of("Asia/Seoul"));
+
+**UTC(Coordinated Universal Time) -> 전세계 협정세계시 -> 영국(런던, 0시)
+**UTC+9 -> 대한민국 표준시(KST)
+** asia/seoul
+
+
+3.1. 날짜 비교하기
+LocalDate, LocalDateTime은 아래와 같이
+isBefore(ChronoLocalDate other),
+isEqual(ChronoLocalDate other),
+isAfter(ChronoLocalDate other) 메소드를 사용해 날짜를 비교할 수 있다.
+리턴 타입은 boolean(true, false)이다.
+
+=========
+컴파일 에러 : 실행 X
+런타임 에러: 실행 중에 오류
+치명 오류 -> error(에러)
+무시 정도의 오류 -> exception(예외)
+
+예외 처리 (Exception) -> 중단되지 않고 프로그램을 수행
+1. 예외를 처리하고 정상적으로 프로그램을 수행할 목적
+2. try ~ catch문
+3. 데이터베이스 연결시동
+
+에러...
+1. 컴파일 에러 -> 프로그램이 실행 X
+2. 실행 중 에러 (런타임 에러)
+ 1) error(에러) -> 프로그램이 중단
+ 2) Exception(예외) -> 예외 처리 등록된 에러들 중에...
+
+예외
+-실행중 오작동이나 결과에 악영향을 미치는 예상치 못한 상황 발생
+--자바에서는 실행 중 발생하는 에러를 예외로 처리 (미리 예상,대비)
+-try문에서 예외가 발생되면 그 아래 명령문이 실행되지 않는다.
+
+실행중 예외가 발생하면
+-자바 플랫폼은 응용프로그램이 예외를 처리하도록 호출
+--응용프로그램이 예외를 처리하지 않으면 프로그램 강제종료 시킴
+예외발생 경우
+-정수를 0으로 나누는 경우
+-배열의 크기보다 큰 인덱스로 배열의 원소를 접근하는 경우
+-정수를 읽는 코드가 실행되고 있을 때 사용자가 문자를 입력한 경우
+-클래스를 찾지 못할 경우(JDBC 드라이버)
+.......
+****예외처리(Exception) -> try ~catch문
+-발생한 예외에 대해 개발자가 작성한 프로그램 코드에서 대응하는 것
+-(try-catch-finally문) 사용
+--finally 블록은 생략 가능
+try{
+예외가 발생할 가능성이 있는 실행문
+}catch (처리할 예외 타입 선언) {
+예외 처리문
+} finally {
+예외 발생 여부와 상관없이 무조건 실행되는 문장
+}
+printStackTrace():예외발생시 호출스택에 있었던 매서드의 정보와 예외메시지를 출력
+getMessage(): 발생한 예외 클래스의 인스턴스에 저장된 메시지(실제 예외)
+
+**다중예외처리
+
+
+
+
+***정리
+*컴파일 에러:컴파일 중에 에러(실행X)
+
+
+*** Exception -> 모든 예외를 처리
+try {
+	//예외 발생 명령문
+} catch (ArithmeticException e1) {
+	e1.printStackTrace();
+} catch (InputMismatchException e2) {
+	e2.printStackTrace();
+} catch (ArrayIndexOutOfBoundsException e3) {
+	e3.printStackTrace();
+} catch (Exception e) {
+	e.printStackTrace();
+} finally {
+	System.out.println("기본실행")
+}
+
+/////////////////////////////////
+ClassNotFoundException
+SQLException -> SQL관련, Connection
+
+
+========================
+** 내부 클래스(inner class)
+클래스 내에 선언된 클래스이다.
+특정 클래스 내에서만 주로 사용되는 클래스를 내부 클래스로 선언한다.
+내부 클래스에서 외부 클래스의 멤버들을 쉽게 접근할 수 있다.
+코드의 복잡성을 줄일 수 있다. (캡슐화)
+
+= 내부 클래스 종류와 특징 =
+-내부 클래스의 종류는 변수의 선언위치에 따른 종류와 동일하다.
+-유효범위와 성질도 변수와 유사하므로 비교해보면 이해하기 쉽다.
+
+1) 인스턴스 클래스(instance class)
+-외부클래스의 멤버변수 선언위치에 선언, 인스턴스 멤버처럼 다루어진다.
+-주로 외부 클래스의 인스턴스 멤버들과 관련된 직업에 사용될 목적으로 선언된다.
+
+2) 스태틱 클래스(static class)
+-외부클래스의 멤버변수 선언위치에 선언, static  멤버처럼 다루어진다.
+-주로 외부 클래스의 static 멤버, 특히 static 매서드에서 사용될 목적으로 선언된다.
+
+3) 지역클래스(local class)
+-외부 클래스의 매서드나 초기화 블럭안에 선언, 선언된 영역 내부에서만 사용될 수 있다.
+
+4) 익명클래스(anonymous class) **상속관계의 부모클래스나 인터페이스, 추상클래스
+-클래스의 선언과 객체의 생성을 동시에 하는 이름없는 클래스(일회용)
+
+= 익명 클래스(무명클래스) = anonymous 클래스
+1. 이름없는 클래스
+2. 한번만 사용하는 클래스
+3. 상속관계에 있는 부모(오버라이드)
+구현객체
+class 클래스 implements interface{
+//오버라이딩
+}
+new 클래스();
+//익명클래스 생성
+new ;
+new 인터페이스(){
+}
+new interface(){
+ //오버라이딩
+};
+
+
+
+
+  ** new  부모클래스(){}
+       new 인터페이스(){}
+       new 추상클래스(){}
+
+지역변수처럼 객체를 생성해야 함
+외부클래스 생성 -> 객체 생성 
+
+
+
+JVM
+
+=========================
+클래스 -> 객체를 만드는 설계도
+//인스턴스화
+타입 객체참조변수 = new 생성자();
+
+
+=========================
+
+=======================
+java 객체형 types
+
+new 객체형();
+String - 문자열""
+	String str1=new String();
+	String str2="문자열";
+배열 - new Array();
+	int[] arr1=new Array();
+	int[] arr2={1,2,3,4,5};
+class - 객체를 만드는 설계도
+	java library
+	사용자 정의 클래스(프로그래머가 직접 생성)
+interface - new를 생성 못한다.
+	
+=========================
+
+시스템의 출력
+
+System.out.println(); //계행
+System.out.print(); //이름:
+System.out.println("%d" , 10); //서식문자, 출력값
+
+시스템 입력
+
+Scanner - 문자, 정수, 실수, boolean, 문자열 ,,,
+java.util.Scanner; -> rt.jar
+Scanner scn=new Scanner(System.in);
+scn.next(); //문자열 입력 (공백x), 단어, "이름", "문자열"
+scn.nextLine(); //문자열 입력(공백 포함), "문자열 입력 123"
+scn.nextInt(); //정수형 입력
+scn.nextDouble(); //실수형 입력
+
+==========================
+
+연산자
+
+-연산: 데이터를 처리(계산,일)하여 결과를 산출하는 것(Operation)
+-연산자: 연산을 하는 기호 +-*/
+-피연산자(operand): 연산의 대상(항)
+5+8 / 5-8 / 5*8 / 5/8
+
+1. 단항 연산자
+증감 연산자
+++
+--
+2. 이항 연산자
+
+1) 산술 연산자
++ 더하기
+- 빼기
+* 곱하기
+/ 나누기
+% 몫
+
+숫자+숫자=숫자
+숫자+"문자열"=문자열
+10+"10"="1010"
+10+"10"+10="1010"+"10"="101010"
+10+10+"10"="20+"10"="2010"
+"10"+(10+10)="10"+20="1020"
+
+System.out.println(변수+"문자열")
+
+2) 대입 연산자 - 연산 결과를 변수에 대입
+int num=10;
+Primitive type: 기본자료형(8가지)
+int num=10; //실제 data값을 대입
+
+Referance: 참조형 타입(String, 배열, class, interface)
+객체형(Object형)
+//객체참조변수(객체의 주소값을 저장)
+//new - 객체를 생성
+
+
+String str=new String("userid")
+. -> 객체 접근 연산자
+str.속성;
+str.매서드();
+
+복합대입연산자
+
+int num=10;
+num=num+10;
+num+=10;
+
+num+=10; // 복합 대입 연산자
+num-=10;
+num*=10;
+num/=10;
+num%=10;		
+
+
+
+3) 비교 연산자 -> "왼쪽"
+연산의 결과는 true, false로 반환(return)
+**제어문(조건문)(if, switch)와 같이 사용하는 경우가 많다.
+>	크냐
+>=	크거나 같냐
+<	작냐
+<=	작거나 같으냐
+==	같으냐
+!=	같지 않지?
+
+int i=10;
+==->premitive type 비교, 단순 주소값 비교
+
+문자열(객체) 비교
+객체1.equals(객체2);
+
+String id="11";
+strAge.equals("11");
+
+
+4.논리 연산자 ($$, ||, ^, ~) -> return boolean
+논리곱(모든 조건이 true일 때만 true)
+조건1 && 조건2 결과
+true	true   true
+true	false  false
+false	true   false
+false	false  false
+
+논리합(하나 이상의 조건이 true일 때 true)
+조건1 || 조건2 결과
+true	true   true
+true	false  true
+false	true   true
+false	false  false
+
+Xor(서로 다르면 true)
+조건1   ^  조건2 결과
+true	true   false
+true	false  true
+false	true   true
+false	false  false
+
+!(부정)
+! true false
+! false false;
+
+if{userId.equals("m111") && userPw.equals("1111")
+}else{
+}
+
+조건 연산자
+비트 연산자
+쉬프트 연산자
+
+3. 삼항 연산자
+?:
+
+
+
+**제어문(조건문) -> 조건에 맞으면 true, 틀리면 false
+1. if문
+- 조건이 1개일 경우
+
+if(조건){
+	//조건이 true일 때만 실행
+}
+
+if(조건) //명령문;
+
+int i=10;
+
+if(i>10){
+	//명령문(처리문)
+	"10보다 큽니다."
+}
+
+조건이 두개
+if(조건){
+	//조건이 true
+}else{
+	//조건이 true가 아닐 때
+} 
+
+2. switch문 -> 모든 switch문은 if문으로 바꿀 수 있다.
+
+switch~case ...조건의 결과가 정수형타입의 값, 하나 결과
+
+switch(변수(설정값)) {
+case "값1" :// 변수(설정값)이 값1이면
+    처리문:
+    break; //switch문을 종료
+
+case "값2" :// 변수(설정값)이 값2이면
+    처리문:
+    break; //switch문을 종료
+
+case "값3" :// 변수(설정값)이 값3이면
+    처리문:
+    break; //switch문을 종료
+
+default:
+     나머지 처리문; //else, 생략 가능...
+
+} switch문 종료.
+
+case 90:
+case 91:
+case 93:.....
+
+key
+관리자 key -> 1 "관리자 권한"
+사장 key -> 2 "중간관리자 권한"
+사원 key -> 3 "일반사원권한"
+일반 -> 접속불가.. 관리자에게 문의
+
+
+
+
+
+
+
+
+*** break -> 그 지점에서 아래 명령문을 실행하지 않고 코드블록을 벗어난다.
+                   -> 메서드를 종료, if, switch문 조건문을 종료
+*** continue -> 그 지점에서 아래 명령문을 실행하지 않고 코드 블럭끝에서 다시 시작
+
+*** 변수(설정값) -> 결과값: 정수형, 문자, 문자열 ** 범위
+
+
+
+
+
+
+
+
+변수, 타입, 연산자, 조건문, 반복문, 배열
+다른 프로그램 언어와 유사
+
+===================================
+
+1. 라이브러리(Library)
+응용 프로그램 개발을 위해 필요한 기능을 모아 놓은 소프트웨어
+jQuery, java library(패키지)
+
+2. 프레임워크(Framework)
+응용프로그램이나 소프트웨어의 개발을 수월하게 하기 위해 제공된 소프트웨어 환경
+Spring(JAVA), react, vue, angular, codeigniter(PHP)
+
+3. API(application programming interface)
+응용 프로그램에서 운영체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스 -> 구글 지도API, 카카오Oauth2, restful api
+
+
+========================================
+google drive
+notion - Oauth
+trello
+
+source -> 버전 관리 -> git, github
+
+=====================================
+
+******반복문 -> 반복적인 명령문을 처리
+
+1.for 
+for(초기화;조건식;증감식){
+
+	//조건이 true면 처리
+}
+** 조건이 false면 한번도 실행 X
+
+
+2. while -> 데이터베이스의 data를 불러오는데 많이 사용
+                -> 무한 루프 주의
+** 조건이 true면 실행
+** 조건이 false면 한번도 실행 X
+
+초기화
+
+while(조건식) {
+	//명령문(처리,실행)
+
+	증감식;
+}
+
+
+
+3. do~while -> while문과 거의 같다.
+** 무조건 한번은 실행
+** 한번 반드시 실행하는 프로젝트에 사용
+
+
+초기화;
+do {
+	//증감식;
+}while(조건)
+
+
+4. 객체형 반복문 -> 컬렉션
+** foreach
+for(자료형 변수명:배열명) {
+	//
+}
+
+
+
+
+
+
+================================
+선생님 192.168.23.211 / github/hrd1027/javastudy
+
+C:\Users\Administrator\Desktop\수업자료\eclipse\javastudy
+
+===============================
+
+
+back -> Java, Servlet, JSP, Thymeleaf
+
+front -> HTML, CSS, Javascripts
+
+DB -> RDBMS -> Oracle, Mysql
+
+Dev Toos -> 이클립스, STS, 인텔리제이, SqlDev, WorkB
+
+Version -> Git, Github
+
+Deploy -> AWS -> EC2
+
+WAS -> tomcat
+
+OS -> Windows, Linux
+
+framework -> Spring boot
+
+library -> jQuery(front)
+
+====================================
+
+
+배열-> 다량 data를 처리하기 위한 list형 (순서가 있는) 타입
+
+1.같은 타입의 data를 순서대로 그룹화
+
+2. 인덱스(번지, 요소)는 0번지부터 시작된다.
+
+3. 배열의 갯수는 고정한다. >> 컬렉션. 고정X
+
+4. 배열 참조형 타입(배열의 전체 주소값으로 접근) new 배열
+
+5. 배열의 생성과 동시 초기화 해야된다.
+
+6.값을 초기화하지 않으면 0으로 초기화된다.
+
+7. 반복문(for)와 같이 많이 사용된다.
+
+8. 전체배열의 data의 갯수는 전체 인덱스 총수보다 1 크다.
+
+9. 배열 이름에 전체 배열의 주소값을 저장
+
+10. foreach (DB의 data를 가져올 때)
+
+
+random -> 무작위
+
+Math.random(); //클래스 매서드 -> 클래스명.매서드()
+
+0 <= Math.random() < 1
+
+
+Java에서 다량의 data를 처리하는 방법
+
+1. 배열 -> 순서, 같은 자료형... 갯수를 정한다.
+2. 컬렉션 -> List, Set, map, Vector, Stack.... 갯수가 정하지 않는다.
+
+
+**다차원 배열
+// int형  data 3행4열의 배열
+int[][] arr1=new int[3][4];
+
+
+           0열      1열       2열       3열
+0행    (0,0)    (0,1)    (0,2)    (0,3)
+1행     (1,0)    (1,1)    (1,2)   (1,3)
+2행     (2,0)    (2,1)    (2,2)    (2,3)
+
+arr1[0][0] - 0행0열
+
+=============================
+
+객체지향언어(Object Oriented Programming) ->OOP
+
+
+절차 지향언어 >> 작업 순서(알고리즘)을 표현(함수들의 집합으로 프로그래밍)
+-> c언어 시스템 개발
+1. 함수
+2. 알고리즘
+3. 자료구조 이해
+
+
+
+객체 지향언어 >> "미리 사용할 목적으로 설계도를 완성하고 그 객체를 이용해서 프로그래밍" -> 응용프로그램, web
+1. 설계도(클래스)
+2. 객체를 생성(클래스를 통해서)
+3. 객체의 여러 성질(다형성, 상속, 캡슐화, ...) 프로그래밍
+
+
+클래스 : 객체를 만들기 위한 설계도, 객체의 속성과 기능 선언
+객체(Object, 인스턴스(instance)) : 실제, 추상 >> 모든 것 .. "클래스를 통해 만들어진.. 실체"
+
+클래스명 변수; //객체 참조변수 -> 생성된 객체의 주소값을 저장
+
+int[] arr1 = new int[5];
+Syring str1=new String();
+
+접근지정자(접근제한자) class 클래스명{
+                   필드; //프로퍼티, 속성
+                   //생성자;//생략할 경우 기본 생성자
+                   매서드;
+}
+
+자바 멤버: 필드, 생성자, 매서드
+
+** 클래스명명 규칙
+1. 대문자로 시작한다. (약속)
+2. 한글을 사용하지 말자. (약속)
+3. 특수기호는 _$ 이외는 사용할 수 없다.
+4. 공백을 허용하지 않는다.
+5. 단어 단어의 첫글자는 대문자로 시작한다. (권고)
+
+
+
+
+
+
+
+
+==========================================
+
+**자바의 메모리영역
+
+1)Method영역
+JVM이 실행되면서 생기는 공간
+Class, 전역변수, Static 변수 정보가 저장되는 공간이다.
+-> 공유 공간
+
+2)Heap
+new 연산자로 생성된 객체, Array 동적으로 생성된 데이터가 저장되는 공간
+Heap에 저장된 데이터는 Garbage Collecto 처리
+Referance Type의 데이터가 저장 공간
+
+3)Stack
+지역변수, 메소드의 매개변수와 임시 데이터가 저장되는 공간
+Last In First Out ->
+
+4)PC Register
+스레드가 생성되면서 생기는 공간
+
+5)Native Method Stack
+Java가 아닌 다른 언어(C,C++)로 구성된 메소드를 실행이 필요할 때 사용되는 공간
+
+
+
+
+=====================
+
+접근제한자
+
+클래스
+public 모든 패키지 클래스에서 접근
+default (생략) : package-private 같은 패키지 내의 클래스만 접근
+
+멤버 (클래스 내부)
+public 다른 패키지
+private 같은 클래스 -> 캡슐화 ->보안,보호, DB관련 DTO,Entity
+protected 상속관계, 같은 패키지
+default 같은 패키지
+
+
+                       같은패키지  다른패키지  상속  같은클래스
+public                    O                  O          O          O
+protected              O 	X          O          O
+default(생략)        O 		X          X 	         O
+private                  X		 X          X           O
+
+
+대부분의 DB 관련 멤버는 private ->필드
+매서드->private필드를 외부에서 접근 가능하게 하는 매서드
+setter
+getter
+*** lombok.jar -> spring
+
+
+
+===============
+
+인스턴스 멤버: 객체가 생성되면 생성되고 객체가 소멸되면 종료
+클래스멤버: 클래스가 생성되면 생성되고 클래스가 소멸되면 종료
+
+인스턴스 멤버
+//인스턴스화(객체화)
+String str=new String("manso")
+str.멤버;//
+
+클래스멤버
+클래스명.멤버;
+
+**final 상수 -> 한번만 초기화
+**반드시 초기화를 해야된다.
+**보통 대문자로 작성
+**클래스의 공용데이터
+public static final String PROJECTNAME="프로젝트명";
+
+2. 멤버(매서드)
+접근제한자 반환타입 매서드명(입력인자) {
+	return 반환값;
+}
+//선언부
+public void instanceMethod(String name) { //인스턴스 매서드
+		//구현부
+	System.out.println(name + "인스턴스매서드2");
+}
+
+**반환타입 -> return값과 타입이 같아야 된다.
+void -> return; //생략
+
+** 매서드를 호출한 곳에 return값이 반한된다. void면 실행만 된다.
+
+**static 매서드는 -> static 멤버만 접근 가능
+**non-static 매서드 ->  static 멤버도 접근 가능
+
+지역변수(logical): 매서드 안에서 선언된 변수, 매개변수
+1. 매서드가 생성되면 반드시 초기화해야한다.
+2. 매서드와 생성과 종료시기가 같다.
+3. 스택메모리에 저장
+
+***캡슐화
+** private 멤버(필드)에 접근 가능한 매서드 -> 보안, 보호
+setters, getters
+
+set~ 설정
+get~ 호출
+
+public void set~ (String userId) {
+	this.
+}
+
+	//setter -> private 필드를 외부에 초기화 매서드
+	public void setUserId(String userId) {
+		this.userId=userId;
+	}
+
+private String userId;
+
+//setter-> private 필드를 외부에 초기화 매서드
+public void setUserId(String userId) {
+	this.userId=userId;
+}
+
+//getter->private필드를 외부에 호출 매서드
+public String getUserId() {
+	return this.userId;
+}
+
+
+
+
+
+
+
+
+
+=============================
+
+** 자바의 메모리영역
+1)Method 영역 -> 클래스가 생성, 클래스가 소멸
+JVM이 실행되면서 생기는 공간
+Class,  전역변수, Static 변수 정보가 저장되는 공간이다.
+-> 공유 공간
+
+2) Heap -> new 생성
+new 연산자로 생성된 객체, Array 동적으로 생성된 데이터가 저장
+
+=======
+
+1. 인스턴스 멤버: 클래스 내부의 변수 -> 인스턴스를 생성한 후 접근 가능 
+2. 클래스 멤버: 인스턴스를 생성하지 않아도 접근 가능
+3. 지역변수(매서드안에 선언) : 매서드 안의 변수
+4. 지역변수(매개인자): 매서드 매개인자
+5. 객체 참조 변수 : 객체(인스턴스)의 주소값을 저장
+
+***상수 -> 상수란 수식에서 변하지 않는 값을 의미한다.
+상수의 선언
+final 상수타입 상수명;
+final static int MAN;
+
+
+========
+
+오버로딩(Overloading) java에서 허용
+*** 매서드 이름 같은 것을 허용
+
+.매서드의 구현부에서 매서드명이 똑같다.
+.매서드의 매개인자 유형이 다른 매서드
+.매서드의 매개인자 갯수가 다른 매서드
+
+public void method1(){}
+public void method1(int num1){
+}
+public void method1(int num1, String name){
+}
+public void method1(String name, int num1){
+}
+
+
+==생성자(Construct)
+
+1. 매서드다. >> 클래스 이름과 똑같은 매서드다.
+2. 반환타입 void다. >>그래서 생략 public 클래스 (){}
+3. 객체를 생성할 때 도움을 주기위한 매서드
+4. 컴파일러가 자동으로 생성해준다. (기본생성자)
+5. 다른 생성자를 생성할 시 기본생성자는 자동으로 생성하지 않는다.
+6. 오버로딩을 허용
+7. 다른 생성자를 호출 시 반드시 생성자의 첫번째 줄에서 호출한다.
+ex) this(), this(인자), this(인자, 인자)
+
+**this()
+-같은 클래스의 다른 생성자 호출
+-생성자 내에서만 사용
+-생성자 첫번째 줄에서 호출
+
+
+===================
+
+package-> 비슷한 기능의 클래스를 그룹화시킨 디렉토리
+**다른 패키지 클래스에 접근하기 위해서는 import문을 사용한다.
+import org.study.DBMemberCommand.*;
+**이클립스는 자동으로 import해준다.
+**패키지를 생성하지 않을 시 default package에 자동으로 저장
+
+===================
+패키지->org.study.package1 , org.study.package2
+
+패키지 4개
+org.study.DBMemberDto -> 1
+	MemberDTO 클래스
+		private String userId
+		private String userPw
+		private int userAge
+		private String userName
+		private String userAddr
+org.study.DBMemberDao -> 2
+org.study.DBMemberCommand -> 3
+org.study.DBMemberController -> 4
+
+********갯수가 정해지지 않는 객체는 Collection을 이용해서 저장
+
+
+==================
+상속(inheritance)
+
+1. "부모(슈퍼)클래스의 멤버(필드, 매서드)를 자식(서브) 클래스에 물려주는 것"
+2. 클래스간의 단일상속만 가능
+3. 자식클래스의 멤버의 수는 반드시 부모클래스보다 크거나 같다.
+4. 자식클래스 extends 부모클래스
+5. 모든 생성자를 상속하지는 않는다.
+6. 상속시 기본생성자는 자식생성자 첫번째 줄에 자동으로 생성해준다.
+7. 상속시 부모클래스의 생성자는 자식클래스 생성자의 첫번재에 생성해주어야된다.
+8. 모든 클래스는 Object 클래스를 상속받는다.
+	클래스 extends Object ->생략(기본)
+9. final클래스는 상속할 수 없다.
+	클래스 extends Object -> 생략(기본)
+*** 생성자 상속시
+
+
+
+
+
+====================
+오버라이드 (오버라이딩)
+"상속관계에서 부모의 매서드를 자식객체에서 재정의 사용"
+1. 매서드 선언부가 똑같다.
+2. 매서드 구현부를 재정의하는 방식
+3. @Override  어노테이션 이용해서 오버라이드 되었음을 알려준다.
+4. 오버라이드된 매서드는 자식매서드가 구현
+5. 단, super 키워드를 사용하면 부모매서드도 구현 가능
+
+*** @어노테이션
+
+
+
+
+
+
+
+CRUD
+create
+read
+update
+delete
+
+==========
+
+***
+MVC(Model View Controller) 패턴
+-> Model2
+
+*** 다형성(Polymorphism) -> 상속, 오버라이딩
+-> "부모 타입의 객체참조 변수로 자식 객체를 참조할 수 있는 것"
+-> 참조할 수 있는 범위 부모타입의 멤버만 참조할 수 있다.
+** 같은 이름의 매서드가 클래스 혹은 객체에 따라 다르게 구현
+** 매서드 오버로딩: 매서드 명이 같고 매개변수 유형, 갯수 상이
+** 매서드 오버라이딩: 상속을 통해서 부모(슈퍼)클래스의 매서드를 구현
+장점
+-> 유지보수가 쉽다.
+-> 재사용 증가
+
+===========
+** 추상매서드(abstract method)
+선언부만 있고 구현부는 없다 -> 미완성 매서드
+추상클래스 (abstract Class)
+
+1. 추상매서드가 있는 클래스(미완성, 공통,  abstract)
+2. 객체를 생성하지 못한다. (new)
+3. 멤버(일반클래스 멤버+추상매서드)
+4. 다른 클래스에게 도움을 주기 위한 클래스(강제성)
+5. 상속을 통해서 반드시 추상매서드를 오버라이드해서 구현시킨다.
+6. 구현 객체를 통해서 구현한다.
+7. 추상클래스 상속시(클래스의 유형을 선택)
+        ** 추상클래스로 설정(다시 추상클래스화)
+        ** 일반클래스에서 추상매서드를 오버라이드 설정
+8. 단일 상속만 허용
+
+
+==========================
+
+추상클래스 1 -> 추상매서드 1
+구현클래스 4
+main클래스
+
+===================
+면접용어정리
+
+추천사이트
+
+https://www.oracle.com/ 자바 오라클 SQL
+자바 설치 1.8
+오라클 설치 Oracle 11 Xe - oracle 11g xe download ()
+
+Dev Tools
+https://www.eclipse.org/downloads/
+이클립스 다운로드패키지 아더 2020-06버전 -> Spring Framework plugin 설치
+
+Front Tools
+visual studio
+
+Front Language
+HTML
+CSS
+Javascripts
+JQuery
+
+학습사이트
+MDN 
+w3schools.com
+caniuse.com
+
+server
+WAS tomcat
+
+webserver
+apache
+
+Cloud server
+aws ec2
+
+
+==============
+
+패키지 -> 비슷한 기능의 클래스를 그룹화
+
+org.study.connect -> DB연동
+	DBconnect클래스(내용x)
+org.study.Dto	-> DB 테이블 연결 객체
+	DBMemberDto클래스 (내용x)
+org.studyDao	-> DB 테이블 접근 query 문을 처리
+	DBMemberDao클래스 (내용x)
+org.study.Command-> DB작업수행
+	SQLQueryCommand -> 추상클래스
+		abstract void excuteQueryCommand() 추상매서드
+	DBDeleteDo
+	DBInsertDo
+	DBSelectDo
+	DBUpdateDo
+org.study.Controller -> 일을 시키고 결과물을 -> view
+	DBController 클래스 main
+
+Scanner 이용
+while(true), if, switch 이용
+
+입력
+"insert"면 콘솔에 회원가입
+"update"면 콘솔에 회원수정
+"delete"면 콘솔에 회원탈퇴
+"조회"면 콘솔에 회원조회
+
+
+
+
+
+
+
+
+
+
+
+==========================
+
+인터페이스
+무명클래스(익명클래스) -> 이름없는 클래스 -> 한가지 기능 구현
+예외처리(Exception)
+기본패키지
+
+===============
+인터페이스
+
+1. 멤버 (추상매서드, final 상수, default , static, 매서드만
+2. 객체를 생성하지 못한다. new X
+3. 다중 상속이 가능(extends) 인터페이스간의 상속시
+    인터페이스 extends 인터페이스 (다중상속)
+    클래스 implements 인터페이스 -> 인터페이스 구현(오버라이딩)
+    클래스 implements interface1, interface2 ...
+4. 구현 객체를 상속을 통해 반드시 추상매서드를 구현(오버라이드)
+5. 다형성을 이용해서 프로그래밍
+6. 안드로이드나 게임  분야의 특정 기능들을 구현
+7. 인터페이스 상속시(타입의 유형을 선택)
+  ** 인터페이스로 설정 (다시 인터페이스화) -> 추상클래스
+  ** 일반클래스에서 추상매서드를 오버라이드 설정
+	    멤버 			          객체		상속	         오버라이드
+추상클래스    일반클래스멤버, 추상매서드               new X	          단일상속만	          필수(추상)
+인터페이스    추상매서드, final, static, default        new X	         다중상속가능             필수(추상)
+
+** final 상수는 반드시 값을 초기화 해야된다.
+
+**클래스 간에
+abstract class A extends 단일상속 {}
+
+**인터페이스 간에
+interface inter1 extends 다중상속 {}
+interface inter1 extends inter2, inter3, ... {}
+
+**인터페이스 구현
+클래스 implements 인터페이스(다중)
+
+==========================
+
+자바 API(Java API)는 자바를 사용하여 쉽게 구현할 수 있도록 한 클래스 라이브러리의 집합이다.
+즉, 자바라는 언어를 사용하여 사용자의 부담을 최소화하는 반면에 입출력, 화면구성, 이미지, 네트워크와 같이 복잡하지만 필요한 클래스들을 미리 구현하여 사용자가 쉽게 구현할수있도록 하는 API이다.
+이러한 자바 API는 하나의 커다란 클래스 계층구조로 설계되어 있다.
+
+java.lang -> 기본
+자바 프로그래밍을 위한 가장 기본적인 패키지와 클래스, 인터페이스를 포함하고 있다.
+java.utils -> 유용한
+프로그램을 제어하기 위한 클래스와 데이터를 효율적으로 저장하기 위한 클래스들을 담고있다.
+java.io -> 입출력
+키보드, 모니터, 프린터, 파일 등을 제어할 수 있는 클래스들의 모음
+
+1. 프로젝트
+2. 반드시 하나 이상의 패키지로 이루어졌다. (default package)
+3. 패키지 서로 연관있는 클래스와 인터페이스로 구성
+
+java.lang.*; //
+
+Object
+1. 모든 클래스의 슈퍼클래스(자동컴파일)
+2. 모든 클래스가 Object클래스의 매서드를 상속
+3. 주요 매서드
+hashCode() >> 객체의 해시코드 값을 리턴 (객체마다 다르다) -> 고유값
+getClass() >> 객체의 클래스 정보 getName() "클래스의 이름"
+toString() >> 클래스의 객체를 문자열로 나타낸다.
+
+
+*** 패키지, import문
+1. 다른 패키지 작성된 클래스
+1) import하지 않을 경우 -> 전체 패키지 경로.class명
+2) 필요한 클래스만 import -> import 패키지경로.class명
+3) 모든 클래스 import -> import 패키지경로.*;
+
+2. 같은 패키지, java.lang은 생략 가능
+
+====================
+
+
+인터페이스
+
+1. 멤버 (추상매서드, final 상수, default , static, 매서드만
+2. 객체를 생성하지 못한다. new X
+3. 다중 상속이 가능(extends) 인터페이스간의 상속시
+    인터페이스 extends 인터페이스 (다중상속)
+    클래스 implements 인터페이스 -> 인터페이스 구현(오버라이딩)
+    클래스 implements interface1, interface2 ...
+4. 구현 객체를 상속을 통해 반드시 추상매서드를 구현(오버라이드)
+5. 다형성을 이용해서 프로그래밍
+6. 안드로이드나 게임  분야의 특정 기능들을 구현
+7. 인터페이스 상속시(타입의 유형을 선택)
+  ** 인터페이스로 설정 (다시 인터페이스화) -> 추상클래스
+  ** 일반클래스에서 추상매서드를 오버라이드 설정
+	    멤버 			          객체		상속	         오버라이드
+추상클래스    일반클래스멤버, 추상매서드               new X	          단일상속만	          필수(추상)
+인터페이스    추상매서드, final, static, default        new X	         다중상속가능             필수(추상)
+
+** final 상수는 반드시 값을 초기화 해야된다.
+
+**클래스 간에
+abstract class A extends 단일상속 {}
+
+**인터페이스 간에
+interface inter1 extends 다중상속 {}
+interface inter1 extends inter2, inter3, ... {}
+
+**인터페이스 구현
+클래스 implements 인터페이스(다중)
+
+==========================
+
+자바 API(Java API)는 자바를 사용하여 쉽게 구현할 수 있도록 한 클래스 라이브러리의 집합이다.
+즉, 자바라는 언어를 사용하여 사용자의 부담을 최소화하는 반면에 입출력, 화면구성, 이미지, 네트워크와 같이 복잡하지만 필요한 클래스들을 미리 구현하여 사용자가 쉽게 구현할수있도록 하는 API이다.
+이러한 자바 API는 하나의 커다란 클래스 계층구조로 설계되어 있다.
+
+java.lang -> 기본
+자바 프로그래밍을 위한 가장 기본적인 패키지와 클래스, 인터페이스를 포함하고 있다.
+java.utils -> 유용한
+프로그램을 제어하기 위한 클래스와 데이터를 효율적으로 저장하기 위한 클래스들을 담고있다.
+java.io -> 입출력
+키보드, 모니터, 프린터, 파일 등을 제어할 수 있는 클래스들의 모음
+
+1. 프로젝트
+2. 반드시 하나 이상의 패키지로 이루어졌다. (default package)
+3. 패키지 서로 연관있는 클래스와 인터페이스로 구성
+
+java.lang.*; //
+
+Object
+1. 모든 클래스의 슈퍼클래스(자동컴파일)
+2. 모든 클래스가 Object클래스의 매서드를 상속
+3. 주요 매서드
+hashCode() >> 객체의 해시코드 값을 리턴 (객체마다 다르다) -> 고유값
+getClass() >> 객체의 클래스 정보 getName() "클래스의 이름"
+toString() >> 클래스의 객체를 문자열로 나타낸다.
+
+
+*** 패키지, import문
+1. 다른 패키지 작성된 클래스
+1) import하지 않을 경우 -> 전체 패키지 경로.class명
+2) 필요한 클래스만 import -> import 패키지경로.class명
+3) 모든 클래스 import -> import 패키지경로.*;
+
+2. 같은 패키지, java.lang은 생략 가능
+
+
+====================
+
+
+//	int num1=100;//생략
+	static final int num1=100;
+//	void m1();//생략
+	abstract public void m1(); //추상매서드
+
+=================
+
+주요 매서드
+
+boolean equals(Object obj)
+obj가 가리키는 객체와 현재 객체를 비교하여 같으면 true 리턴
+
+Class getClass()
+현 객체의 런타임 클래스를 리턴
+
+int hashCode()
+현 객체에 대한 해시코드 값 리턴 (해시코드 = 고유값)
+
+String toString()
+현 객체에 대한 문자열 표현을 리턴
+
+void notify()
+현 객체에 대해 대기하고 있는 하나의 스레드를 깨운다.
+(스레드 = 작업 단위)
+
+void notifyAll()
+현 객체에 대해 대기하고 있는 모든 스레드를 깨운다.
+
+void wait()
+다른 스레드가 깨울때까지 현재 스레드를 대기하게 한다.
+ 
+================
+
+**Wrapper 클래스
+"제네릭타입 클래스에 사용"
+"컬렉션 프레임워크에 있는 클래스에 사용"
+1. 기본 자료형의 객체형 타입
+2. 기본자료형 -> 객체형 "박싱"
+3. 객체형 -> 기본자료형 "언박싱"
+
+기본타입        객체형
+byte	      Byte
+short	      Short
+int	      Integer
+long	      Long
+float	      Float
+double	      Double
+char	      Character
+boolean	      Boolean
+
+"박싱"
+기본자료형 -> 객체형
+int i = 0;
+Integer it1 = new Integer(int형);
+
+"언박싱"
+객체형 -> 기본자료형
+Integer it1 = new Integer(10);
+it1.intValue(); // int 변환 매서드
+
+주요매서드
+.intValue(); // int 변환 매서드
+
+static Integer.bitCount(); // 2진수 변환시 1의 갯수
+static Integer.parseInt(String); // "111" -> 정수(int)
+Integer.parseInt("111",10); // "문자열", 변환진수
+
+String toBinaryString(10); // 정수 -> 2진수(String) 10->"1010"
+String toHexString(10); // 정수 -> 16진수
+String toOctalString(10); // 정수 -> 8진수
+String toString(10); // 정수 -> 문자열(String) ***
+
+Wrapper
+String 수정 불가능
+StringBuffer 수정 가능
+
+==String==========
+1.java.lang.* 기본패키지
+2. 문자열 나타낸다.
+3. 수정할 수 없다.
+4. new와 리터럴 방식으로 문자열을 생성할 수 있다.
+***String 생성방법
+String str1="문자열"; //리터럴->공유 데이터
+String str2=new String("문자열");//객체 생성->heap
+
+char[] ch={'j','a','v','a','2','0','2'}; //char문자를 이용
+String str3=new String(ch);
+
+리터럴 -> 있는 그 자체 -> 변하지 않는, 주소가 없는
+
+===String 주요매서드===
+java, jsp, thymeleaf, Servlet, HTML, CSS, javascript
+
+반환타입    매서드 		설명
+char	charAt(index)	index문자를 반환 **
+int	codePointAt(index) index에 있는 유니코드 값반환
+int	compareTo(String)  사전 순서(0, 양수, 음수)
+String	concat(String)	문자열을 합치는~ **
+boolean	contains("찾을값")	문자열에 찾을값이 포함되어 있느냐 **
+int	length()		문자열 길이 *****
+String	replace(s1,s2)	문자열s1를 s2 변경
+String[]	split("문자열,기호")	문자열을 기호로 구분하여 배열화 ***
+String	substring(시작번)	문자열을 시작번부터 추출 *****
+	substring(시작번,끝번) 문자열을 시작번지부터 끝번지 앞추출 ******
+String	toLowerCase()	소문자 **
+String	toUpperCase()	대문자 **
+String	trim()		문자열 좌우공백 제거 후 **
+========================
+**예외를 발생 -> 예외를 던졌다.
+ throw new Exception()
+
+try {
+//예외 발생
+   throw new Exception()
+}catch (Exception e) {
+
+}
+
+=======================
+
+class A{
+	void m1() throws 예외 {
+		//예외 발생
+	}
+}
+// service(일하는~, 서버,,,), commend
+=======================
+throw new Exception(); //고의 예외를 발생시킨 것
+//매서드에 예외를 던진다.
+throws IOException, SQLException, ClassNotFoundException
+//데이터베이스 연결 (Connection 연동), SQL 처리, File 입출력
+//Servelet->Web->service
+
+
+
+
+
+
+
+**** 싱글톤 
+-> "객체를 한번만 생성"
+-> 생성자가 private
+
+
+===========
+
+** Generics(제네릭) <E>
+1.데이터타입을 미리 정의하지 않고 클래스를 인스턴스하는 시점에 데이터 타입을 지정해주는 방식
+2. 참조형(객체타입)만 타입으로 설정할 수 있다.
+3. 프로그래머가 원하는 객체 타입을 명시 의도하지 않은 객체물
+4. 클래스의 재사용성이 좋다.
+5. 특정 타입만 다루지 않고, 여러 종류의 타입으로 변신할 수 있도록 클래스나 매소드를 일반화 시키는 기법
+6. **컬렉션의 요소는 객체만 가능
+    -int, char, double 등의 기본 타입으로 구체화 불가.
+참조형만 >>>>>>> 제네릭 >>>>>> 컬렉션 프레임워크 클래스, 인터페이스에 사용
+기본형X >> Wrapper
+제네릭 타입에 사용되는 파라미터
+-타입 매개변수는 하나의 대문자를 사용한다.
+-타입매개변수를 여러개 사용할 수 있지만 하나의 선언문에서 두번 사용될 수는 없다.
+
+class GenericsClass<T>{
+	T num;
+	T method(T num1){
+	System.out.println(num1);
+	}
+}
+new GenericsClass<String>();
+new GenericsClass<Integer>();
+=============================
+Collection(컬렉션)
+-요소라고 불리는 가변 개수의 객체들의 저장소(개수가 정해지지 않았다)
+-객체들의 컨테이너(Container)라고 불림
+-요소의 개수에 따라 크기자동조절
+-요소의 삽입 삭제에 다른 요소의 위치 자동 이동
+-고정 크기의 배열을 다루는 어려움 해소
+-다양한 객체들의 삽입 삭제 검색 등의 관리 용이
+==========================
+
+		Collection<E>				Map<K,V>
+	Set<E>		List<E>		Queue<E>
+
+--------------------------------------------------------------------------
+Hashset<E>	ArrayList<E> Vector<E>	LinkedList<E>	HashMap<K,V>
+			Stack<E>
+===============================
+
+
+
+
+
+
+
+--------------------------------------------------
+프레임워크
+-표준구조를 구현하는 클래스와 라이브러리 모임이다.
+-간단하게 프레임워크라고도 부른다.
+-재사용할 수 있는 수많은 코드를 프레임워크로 통합함으로써 개발자가 새로운 애플리케이션을 위한 표준 코드를 다시 작성하지 않아도 같이 사용된다.
+-Spring boot -> Spring boot, PHP(codeigniter)		, 프론트(node.js, vue, react, angular)
+-Collection FrameWork -> Collection -> Collection Class
+===========================
+컬렉션 클래스(Collection Framework)
+-다수의 데이터를 저장할 수 있는 클래스
+
+List: 순서가 있는 데이터 집합, 데이터 중복을 허용 -> DB데이터 출력 -> 배열(길이가 정해져있다) ***웹 list(반복과 같이 사용)
+Set: 순서를 유지하지 않는 데이터 집합, 데이터 중복을 허용안함 -> 주머니
+Map: 키와 값의 쌍으로 이루어진 데이터의 집합, 키는 중복 허용안함 -> Map <key;value> -> ajax, @RequestBody
+          -> JSON, Ajax, @RequestBody
+
+** Queue: FIFO(First In First Out) -> 선입선출(먼저 들어온 자료가 먼저 출력)
+Stack: LIFO(Last In First Out) -> 후입선출(나중에 들어온 자료가 먼저 출력)
+
+======================================
+
+벡터 Vector <E> -> ArrayList<E> 과거형
+-배열을 가변 크기로 다룰 수 있게 하는 컨테이너
+  -요소의 개수가 넘치면 자동으로 길이 조절
+-요소 객체들을 삽입 삭제 검색하는 컨테이너
+
+Vector에 삽입 가능한 값
+-객체, null
+-기본 타입의 값은 Wrapper 객체로 만들어 저장
+
+Vector에 객체 삽입
+-벡터의 맨 뒤, 중간에 객체 삽입 가능
+
+Vector에서 객체 삭제
+-임의의 위치에 있는 객체 삭제 가능
+
+
+주요매서드
+.add(E); //벡터 추가(맨 뒤에서부터 추가) 객체 하나씩(회원가입) ***
+.addAll(컬렉션); //다른 컬렉션을 추가 (맨뒤에서부터 추가)
+.add(2,1500); // 2번지 요소를 추가
+.clear(); //모든 요소 삭제
+.contains(객체); //포함하고 있느냐?
+.elimentAt(index);// index에 해당 요소 
+.get(index);// index에 해당요소 ***
+.indexOf(객체);// 객체의 index, 없으면 -1
+.isEmpty(); 벡터의 요소가 없다. "벡터가 비었느냐?"
+.remove(index);// index요소 삭제
+.remove(객체요소); //객체요소 삭제
+v0.removeAll(v1); //v0컬렉션에서 컬렉션 v1 제거
+.size(); // 벡터의 갯수 ***
+.toArray(); //배열화
+
+ ArrayList<Integer> list1 = new ArrayList<Integer>();
+                                list1.add(new Integer(10));
+		list1.add(new Integer(20));
+		list1.add(new Integer(30));
+		list1.add(new Integer(40));
+		list1.add(new Integer(50));
+
+for(컬렉션요소타입 변수: 컬렉션객체) {
+	System.out.println(변수); 
+	// 자동으로 0번지 get 출력 -> 마지막 요소까지
+}
+for(Integer el:list1){
+	System.out.println(el) 
+}
+
+*** 패키지 만들고
+org.study.dto 패키지
+	MemberDto 클래스 생성
+	모든 필드는 private
+		String userId;
+		String userPw;
+		String email;
+		int age;
+	모든 필드를 매개변수로는 갖는 생성자
+	getters, setters 작성 (모든 필드)
+org.study.controller 패키지
+	MemberController 클래스 생성
+
+
+
+
+
+
+
+
+
+
+
+//반복문 -> foreach -> 모든 컬렉션의 요소를 선택, 출력
+for(요소타입 변수: 컬렉션) {
+	System.out.println(변수)
+}
+
+//Iterator -> 객체의 직렬화
+
+Iterator <String> iter = v1.iterator();	//1. Iterator 객체 생성
+
+while (iter.hasNext()) {		//2. while 문으로 Iterator 모든 요소 출력
+	String str = (String) iter.next(); //다음 요소가 있으면 get
+	System.out.println(str);
+}
+
+
+***ArrayList<E> -> Vector 현재 버전 -> 많이 사용
+-가변 크기 배열을 구현한 클래스
+벡터와 거의 동일
+-요소 삽입, 삭제, 검색 등 벡터 기능과 거의 동일
+-벡터와 달리 스레드 동기화 기능 없음 (다수 스레드가 동시에  ArrayList에 접근할 때 동기화되지 않음, 개발자가 스레드 동기화 코드 작성)
+
+**Iterator <E> : List 구조의 컬렉션의 요소를 순서대로 검색하는 인터페이스
+Vector, ArrayList, LinkedList, Stack(pop, push)
+
+
+
+========
+
+***LinkedList
+
+1. LinkedList는 ArrayList와 함께 List를 구현 클래스.
+2. ArrayList와 다르게 LinkedList는 각각의 노드를 연결하는 방식
+3. LinkedList는 양방향 연결 리스트(Doublely Linked List)로 구현
+4. 각각 데이터가 노드(Node)로 구성되어 연결이 되는 구조
+5. 각각의 노드는 데이터와 함께 next(다음 노드)와 prev(이전 노드) 값을 내부적 존재
+6. 장점은 데이터를 추가하거나 삭제하는 것이 편리하다.
+7. 위치 상관없이 추가나 삭제를 할 경우 변경되는 노드만 다시 연결해주면 됨.
+8. ArrayList는 검색, LinkedList는 삽입/삭제 시 사용
+
+*** Set
+1. Set 컬렉션은 저장 순서가 없다.
+2. 중복해서 저장할 수 없다.
+3. 인덱스를 관리하지 않는다.
+4. HashSet을 사용
+5. Collection 인터페이스에서 상속받은 매서드만 구현
+
+***Map: 키와 값의 쌍으로 이루어진 데이터의 집합, 키는 중복 허용안함
+HashMap <K,V> - 대표적인 구현객체
+K:키로 사용할 요소의 타입 중복 불가능
+V:값으로 사용할 요소의 타입. 중복 가능
+K를 이용해서 V를 찾는다.
+
+삽입 및 검색이 빠른 특징
+요소 삽입: put() 메소드
+요소 검색: get() 메소드
+** ajax, Json, @RequestBody, @RestController
+
+
+
+**Stack 
+-> "LIFO" -> 맨 나중에 입력 데이터 -> 가장 먼저 출력 
+-> 후입 선출
+.push() -> push() 메소드를 이용한 요소의 저장 -> 마지막 요소 다음에 추가 //.append()와 비슷함 **javascript 함수에 나옴
+.peek()메소드를 이용한 요소의 변환 -> 특정요소 반환 (유튜브 영상 아래부분)
+.pop() -> 메소드를 이용한 요소의 반환 및 제거 -> 마지막 요소 삭제 **javascript
+.search() 메소드를 이용한 요소의 위치 검색
+
+
+
+**Queue -> 구현 객체 LinkedList
+--> "FIFO" -> 가장 먼저 입력 데이터 -> 가장 먼저 출력
+LinkedList<String> qu = new LinkedList <>();
+qu.add(객체);
+.peek() 메소드를 이용한 요소의 반환
+.poll() 메소드를 이용한 요소의 반환 및 제거
+.remove() 메소드를 이용한 요소의 제거
+
+
+***Thread
+1. task -> 작업(하나의 작업)
+2. 멀티태스킹(multi-tasking) : 동시에 다중 작업
+- 여러개의 작업(테스크)이 동시에 처리하는 것
+- 프로그램 언어 >> 프로그램 >> 실행(프로세스)
+3. 프로세스 : 메모리 공간이 할당
+4. 멀티프로세싱 : 하나의 응용프로그램이 여러개의 프로세스
+
+스레드(thread) -> 하나의 작업 단위
+운영체제에 의해 관리되는 하나의 작업 혹은 태스크
+스레드와 태스크(혹은 작업)은 바꾸어 사용해도 무관
+
+** 멀티스레딩(multi-threading)
+1. 여러 스레드를 동시에 실행시키는 프로그래밍 방법
+2. 하나의 응용프로그램이 여러 개의 스레드를 생성하고, 각 스레드가 하나의 작업을 처리하는 기법
+3. 하나의 응용프로그램에 속한 스레드는 변수 메모리, 파일 오픈테이블 등 자원으로 공유하므로, 문맥 교환에 따른 오버헤드가 매우 작음
+4. 현재 대부분의 운영체제가 멀티스레딩을 기본으로 하고 있음.
+
+JVM과 자바의 멀티스레딩
+하나의 JVM은 하나의 자바 응용프로그램만 실행
+자바 응용프로그램이 시작될 때 JVM이 함께 실행됨
+자바 응용프로그램이 종료될 때 JVM이 함께 종료됨
+
+스레드 스케쥴링(JVM에 의해서 이루어진다) : 스레드를 관리하는 것
+
+thread -> 주요 멤버
+run() : 스레드 코드에서 JVM에 의해 호출, 반드시 오버라이딩해서 구현. *****
+run 매서드가 종료되면 스레드도 종료된다.
+
+start() : JVM에서 스레드를 실행하도록 요청 ***
+
+interrupt() : 스레드 강제 종료
+
+join () : 스레드 종료할 때까지 기다린다.
+
+getId : 스레드 아이디
+getName: 스레드 이름
+sleep(): 스레드 잠시 멈춤 ****
+currenThread(): 현재 실행중인 스레드
+
+
+** 람다식(익명 메소드) -> javascript(arrow function -> 화살표 함수)
+
+람다식의 장점
+
+1. 코드를 간결하게 구성할 수 있다. ****
+함수형 버전은 간결하다. 몇줄의 코드만으로 명령형 버전과 같은 결과를 낼 수 있다.
+
+2. 오류를 줄일 수 있다.
+변수의 명시적인 변경이나 재할당의 문제는 버그의 원천이 되고, 이를 동시성을 갖도록 하기에는 무척 어려운 코드가 된다.
+
+3. 원하는 부분을 병렬화 하기 쉽다.
+병렬화를 구현하기는 매우 어려운 작업이다.
+
+
+** 익명클래스 -> 구현객체없이 부모 클래스, 인터페이스, 추상클래스를 구현
+new 부모클래스(){};
+new 부모인터페이스(){};
+new 추상클래스(){};
+*** 공식 -> 외우기X -> 자연스럽게 연습
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
