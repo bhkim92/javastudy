@@ -1,0 +1,53 @@
+추천사이트
+
+자바 설치 (1.8)
+https://www.oracle.com/ 자바 오라클 SQL
+오라클 설치 Oracle 11 Xe - oracle 11g xe download ()
+
+Dev Tools
+https://www.eclipse.org/downloads/
+이클립스 다운로드패키지 아더 2020-06버전 -> Spring Framework plugin 설치
+
+Front Tools
+visual studio
+https://visualstudio.microsoft.com/ko/vs/whatsnew/
+
+5대 브라우저
+chrome / safari / edge / firefox / opera
+
+Front Language
+HTML
+CSS
+Javascripts
+JQuery
+
+학습사이트
+MDN 
+w3schools.com
+caniuse.com
+
+server
+WAS tomcat
+
+webserver
+apache
+
+Cloud server
+aws ec2
+
+점유율 비교
+gs.statcounter.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+github
+
+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
+
+echo "# javastudy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bhkim92/javastudy.git
+git push -u origin main
+
+
+
+
+
+https://github.com/hrdjava1027/javaStudy
+
+1.회원가입
+2. 자격증명관리 -> 2021 -> token
+3. 처음 git 설치할 때
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
